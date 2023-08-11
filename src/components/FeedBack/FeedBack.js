@@ -1,15 +1,18 @@
-import { nanoid } from 'nanoid';
+import React from 'react';
 
-export const FeedBackForm = ({leaveFeedBack}) => {
-    return (
-        <form onClick={(values, actions) => {
-            leaveFeedBack({ ...values, id: nanoid() });
-        actions.resetForm();
-      }}>
-          <p>Please leave a feedback</p>
-          <button value="good">Good</button>
-          <button value="neutral">Neutral</button>
-          <button value="bad">Bad</button>
-          </form>
-          )
-}
+export const FeedBackForm = ({ leaveFeedBack }) => {
+    
+  const handleButtonClick = (value, event) => {
+    event.preventDefault()
+    leaveFeedBack(value);
+  };
+
+  return (
+    <form>
+      <p>Please leave a feedback</p>
+      <button onClick={event => handleButtonClick('good', event)}>Good</button>
+      <button onClick={event => handleButtonClick('neutral', event)}>Neutral</button>
+      <button onClick={event => handleButtonClick('bad', event)}>Bad</button>
+    </form>
+  );
+};
