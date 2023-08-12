@@ -1,5 +1,4 @@
-import styled from '@emotion/styled';
-
+import styled from 'styled-components';
 export const ListFeedback = styled.ul`
   padding-left: 70px;
   list-style: none;

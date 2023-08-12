@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 400px;
@@ -6,5 +6,9 @@ export const Container = styled.div`
   padding: 12px;
   margin: 0 auto;
   text-align: center;
-  background-color: #8181f1;
-  `;
+  background-color: #35CD00;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`;

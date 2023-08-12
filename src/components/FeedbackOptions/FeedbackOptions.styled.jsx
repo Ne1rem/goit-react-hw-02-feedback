@@ -1,5 +1,4 @@
-import styled from '@emotion/styled';
-
+import styled from 'styled-components';
 
 export const ButtonContainer = styled.div`
     display: flex;
